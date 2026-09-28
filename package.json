@@ -18,7 +18,8 @@
     "test": "vitest run",
     "playtest": "tsx tools/playtest/run.ts --speed=3",
     "smoke": "tsx tools/playtest/smoke.ts",
-    "deploy": "tsx tools/deploy/pages.ts"
+    "deploy": "tsx tools/deploy/pages.ts",
+    "verify:live": "tsx tools/playtest/live.ts"
   },
   "devDependencies": {
     "@types/node": "24.3.0",

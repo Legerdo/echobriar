@@ -143,6 +143,7 @@ Windows에서는 `run.bat`을 더블클릭해도 됩니다 (의존성 설치 후
 | `npm run smoke` | 브라우저 스모크 테스트 (Chrome/Edge 필요) |
 | `npm run playtest` | 브라우저 전체 진행 플레이테스트 (타이틀 → 엔딩) |
 | `npm run deploy` | 빌드 후 `gh-pages` 브랜치로 GitHub Pages 배포 |
+| `npm run verify:live` | 배포된 사이트에서 타이틀 → 새 게임 → 첫 전투를 브라우저로 확인 |
 
 <details>
 <summary><b>디버그 기능</b> (일반 플레이에서는 숨김)</summary>
@@ -233,6 +234,7 @@ npm run deploy     # npm run build → dist/ 를 gh-pages 브랜치로 푸시
 ```
 
 `vite.config.ts`의 `base: './'` 덕분에 저장소 하위 경로(`/echobriar/`)에서도 그대로 동작합니다.
+`gh-pages`는 배포 전용 브랜치이며, 배포할 때마다 빌드 결과 한 커밋으로 덮어씁니다. 배포 뒤 `npm run verify:live`로 실제 사이트를 확인할 수 있습니다.
 
 ## 알려진 제한 사항
 
