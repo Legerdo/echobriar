@@ -1,0 +1,31 @@
+{
+  "name": "echobriar",
+  "private": true,
+  "version": "1.0.0",
+  "engines": { "node": ">=22.12.0" },
+  "description": "에코브라이어: 잔향의 뿌리 — 2D 픽셀아트 반응형 턴제 RPG",
+  "homepage": "https://legerdo.github.io/echobriar/",
+  "repository": { "type": "git", "url": "https://github.com/Legerdo/echobriar.git" },
+  "type": "module",
+  "scripts": {
+    "art": "tsx tools/artgen/generate.ts && tsx tools/artgen/validate.ts",
+    "art:gen": "tsx tools/artgen/generate.ts",
+    "art:validate": "tsx tools/artgen/validate.ts",
+    "dev": "npm run art && vite",
+    "build": "npm run art && tsc --noEmit && vite build",
+    "preview": "vite preview --port 4173 --strictPort",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "playtest": "tsx tools/playtest/run.ts --speed=3",
+    "smoke": "tsx tools/playtest/smoke.ts",
+    "deploy": "tsx tools/deploy/pages.ts"
+  },
+  "devDependencies": {
+    "@types/node": "24.3.0",
+    "playwright-core": "1.63.0",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "vite": "8.3.1",
+    "vitest": "5.0.2"
+  }
+}

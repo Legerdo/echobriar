@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon" href="data:," />
+    <title>에코브라이어: 잔향의 뿌리</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="stage">
+        <canvas id="screen" role="img" aria-label="게임 화면"></canvas>
+        <div id="ui"></div>
+        <div id="sr-live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+      </div>
+      <div id="boot" role="status">불러오는 중…</div>
+    </div>
+    <noscript>이 게임을 실행하려면 자바스크립트가 필요합니다.</noscript>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

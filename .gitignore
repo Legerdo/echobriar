@@ -1,0 +1,6 @@
+node_modules/
+dist/
+public/generated/
+tools/artgen/out/
+tools/playtest/out/
+*.log
